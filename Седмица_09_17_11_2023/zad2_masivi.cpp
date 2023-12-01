@@ -26,7 +26,7 @@ int main()
         {
             if(arr[j] > arr[j+1])
             {
-                swap(arr[i], arr[i+1]);
+                swap(arr[j], arr[j+1]);
             }
         }
     }*/
