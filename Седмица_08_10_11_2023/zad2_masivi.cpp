@@ -26,7 +26,8 @@ int main()
         }
         else
         {
-            masiv3[i] = masiv2[i - razmer2];
+            masiv3[i] = masiv2[i - razmer2];  /// ако са еднакви размерите
+            /// masiv3[i] = masiv2[i - razmer1];  /// ако са различни размерите
         }
         //cout<<masiv3[i]<<" ";
     }
