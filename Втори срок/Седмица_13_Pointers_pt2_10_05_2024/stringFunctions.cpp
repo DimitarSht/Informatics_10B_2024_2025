@@ -9,60 +9,69 @@ using namespace std;
 */
 const int MAXSIZE = 1024;
 
-
-unsigned int myStrlen(const char *arr)
+unsigned int myStrlen(const char* str)
 {
-    if(!arr) /// (!arr)
-    {
-        return 0;
-    }
-    unsigned int i = 0;
-    while(*arr)
-    {
-        i++;
-        arr++;
-    }
-    return i;
+	if (!str)
+		return 0;
+
+	unsigned int result = 0;
+	while (*str) /// еквивалентно на (*str) != '\0'
+	{
+		result++;
+		str++;
+	}
+	return result;
 }
 
-void myStrCpy(char *dest, char *src)
+/// Копираме source в dest.
+/// Казваме, че в dest има достатъчно място и за двата масива.
+void myStrcpy(const char* source, char* dest)
 {
-    if(!src)
-    {
-        return;
-    }
-    while(*src) /// src[i] != '\0'
-    {
-        *dest = *src;
-        dest++;
-        src++;
-    }
+	if (!source || !dest)
+		return;
+	while (*source)   
+	{
+		*dest = *source;
+		dest++;
+		source++;
+	}
+	*dest = '\0';
 }
 
-int myStrCmp(char* str1, char* str2)
+// - first < second
+// 0 first == second
+// + first > second
+int myStrcmp(const char* first, const char* second)
 {
-    if(!str1 || !str2) return 10;
-    while(*str1 && *str2)
-    {
-        str1++;
-        str2++;
-    }
-    return *str1 - *str2;
+	if (!first || !second)
+		return 0; /// някаква стойност за грешка
+
+	
+	while ((*first) && (*second) && ((*first) == (*second))) 
+	{
+		first++;
+		second++;
+	}
+
+	return (*first - *second);  /// връщаме разликата в последните символи
+	 
 }
 
-char* myStrCat(char* dest, char* src)
+void myStrcat(char* first, const char* second)
 {
-    unsigned int length1 = myStrlen(src);
-    length1 += myStrlen(dest);
-    myStrCpy(dest, src);
-    return dest;
+	if (!first || !second)
+		return;
+	
+	int firstLen = myStrlen(first);
+	first += firstLen;
+	myStrcpy(second, first);
 }
-
 
 int main()
 {
+	char str[20] = "ABC";
+	char str2[] = "XY";
+	myStrCat(str, str2);
 
-
-
-    return 0;
+	cout << str;
 }
