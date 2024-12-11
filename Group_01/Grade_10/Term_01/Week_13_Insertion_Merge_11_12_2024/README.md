@@ -1,1 +1,2 @@
 # Какво правихме в час?
+- Представихме алгоритмите за сортиране Insertion Sort, Merge Sort -> [имплементации тук](https://github.com/DimitarSht/Informatics_10B_2024_2025/tree/main/Group_01/Grade_10/Term_01/Week_13_Insertion_Merge_11_12_2024/Solutions)
