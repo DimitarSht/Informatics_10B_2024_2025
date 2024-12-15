@@ -102,7 +102,7 @@ void mergeSort(int arr[], int left, int right)
     }
 }
 
-int main() 
+int main()
 {
 
     int sz = 100000;
@@ -110,17 +110,20 @@ int main()
 
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> dis(0, 99);
+    uniform_int_distribution<> dis(0, 99999);
 
     for (int i = 0; i < sz; ++i) {
         arr[i] = dis(gen);
     }
 
-    /// Bubble bubble(arr, sz);
-    /// Selection selection(arr, sz);
-    /// Insertion insertionSort(arr, sz);
-    /// Merge 
+    /// Bubble
+    ///bubble(arr, sz);
+    /// Selection
+    ///selection(arr, sz);
+    /// Insertion
+    ///insertionSort(arr, sz);
+    /// Merge
     mergeSort(arr, 0, sz - 1);
-    
+
     return 0;
 }
