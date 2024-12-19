@@ -1,0 +1,2 @@
+# Какво правихме в час?
+- Запознахме се с метода за сортиране Quick Sort -> [имплементация тук](https://github.com/DimitarSht/Informatics_10B_2024_2025/tree/main/Group_01/Grade_10/Term_01/Week_14_Quick_18_12_2024/Solutions)
